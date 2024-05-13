@@ -21,10 +21,18 @@ public class Student {
         this.finalScores = finalScores;
     }
 
-    public Course[]<> registerCourse(String courseId) {
+    public ArrayList<Course[]> registerCourse(String courseId) {
         ArrayList<Course[]> course = new ArrayList<>();
-        //insert logic
 
+        for (int i = 0; i < course.size(); i++) {
+            if (course.get(i).equals(courseId)) {
+                return course = null;
+                continue;
+            } else {
+                course.add(courseId);
+            }
+
+        }
         return course;
     }
 
