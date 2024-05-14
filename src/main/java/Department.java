@@ -4,23 +4,30 @@ public class Department {
     static String nextId;
 
     public Department(String departmentId, String departmentName) {
-        this.departmentId = departmentId;
-        this.departmentName = departmentName;
+        if (validateDepartmentName(departmentName)) {
+            this.departmentId = departmentId;
+            this.departmentName = departmentName;
+        } else {
+                this.departmentId = null;
+                this.departmentName = null;
+        }
     }
 
-    public boolean validateDepartmentNAme(String departmentName) {
-
-        for(int i = 1; i < departmentName.length(); i ++){
-
-            if (Character.isLetter(departmentName.charAt(i)) && Character.isSpace(departmentName.charAt(i))) {
-
+    /**
+     * Takes a departement name and makes sure it only contains letters or spaces
+     * @param departmentName
+     * @return returns true if the department name is valid
+     */
+    public boolean validateDepartmentName(String departmentName) {
+        boolean check;
+        for (int i = 1; i < departmentName.length(); i++){
+            if (Character.isLetter(departmentName.charAt(i)) || Character.isSpace(departmentName.charAt(i))) {
+                check = true;
                 continue;
-
             } else {
-
-                return false;
+                return check = false;
             }
         }
-        return true;
+        return check = true;
     }
 }

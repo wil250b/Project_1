@@ -8,11 +8,12 @@ public class Student {
     private Department department;
     private Course[] registeredCourses;
     private double[] finalScores;
-    public static int nextId;
+    public static int nextId = 1;
 
     public Student(String studentId, String studentName, Gender gender, Address address,
                    Department department, Course[] registeredCourses, double[] finalScores) {
-        this.studentId = studentId;
+        this.studentId = "S"+ nextId; //
+        nextId++;
         this.studentName = studentName;
         this.gender = gender;
         this.address = address;
@@ -21,25 +22,30 @@ public class Student {
         this.finalScores = finalScores;
     }
 
-    public ArrayList<Course[]> registerCourse(String courseId) {
-        ArrayList<Course[]> course = new ArrayList<>();
+    /**
+     *
+     * @param course
+     * @return
+     */
+    public ArrayList<Course[]> registerCourse(Course course) {
+        ArrayList<Course[]> course1 = new ArrayList<>();
 
         for (int i = 0; i < course.size(); i++) {
-            if (course.get(i).equals(courseId)) {
+            if (course.get(i).equals(course)) {
                 return course = null;
                 continue;
             } else {
-                course.add(courseId);
+                course.add(course1);
             }
 
         }
-        return course;
+        return course1;
     }
 
-    public Course[] dropCourse(String courseId) {
+    public Course[] dropCourse(Course course) {
         ArrayList<Course[]> course = new ArrayList<>();
 
-        //insert logic
+        //TODO
 
         return course;
     }
