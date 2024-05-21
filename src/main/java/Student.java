@@ -32,7 +32,7 @@ public class Student {
 
         for (int i = 0; i < course.size(); i++) {
             if (course.get(i).equals(course)) {
-                return course = null;
+                return ArrayList<course> = null;
                 continue;
             } else {
                 course.add(course1);
