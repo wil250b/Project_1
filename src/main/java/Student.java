@@ -8,7 +8,7 @@ public class Student {
     private Department department;
     private Course[] registeredCourses;
     private double[] finalScores;
-    public static int nextId = 1;
+    private static int nextId = 1;
 
     public Student(String studentId, String studentName, Gender gender, Address address,
                    Department department, Course[] registeredCourses, double[] finalScores) {

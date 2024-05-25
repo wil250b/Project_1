@@ -10,7 +10,16 @@ public class Course {
     ArrayList<Double> finalScores;
     private static int nextId;
 
-    public boolean isAssignmentWeightValid(Student student) {
+    public boolean isAssignmentWeightValid() {
+
+    }
+    public boolean registerStudent (Student student) {
+
+        registeredStudents.add(student);
+
+        return true;
+    }
+    public int[] calcStudentsAverage(){
 
     }
 }
