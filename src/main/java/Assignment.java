@@ -8,14 +8,14 @@ public class Assignment {
     int maxScore;
     double assignmentAverage;
     ArrayList<Integer> scores = new ArrayList<Integer>();
-    private static int nextId = 1;
+    public static int nextId = 1;
 
-    public Assignment(String assignmentId, String assignmentName, double weight, int maxScore, double assignmentAverage, ArrayList<Integer> scores) {
-        this.assignmentId = assignmentId;
+    public Assignment(String assignmentName, double weight, int maxScore) {
         this.assignmentName = assignmentName;
         this.weight = weight;
         this.maxScore = maxScore;
     }
+
 
     public void calcAssigmentAvg(ArrayList<Integer> scores) {
 

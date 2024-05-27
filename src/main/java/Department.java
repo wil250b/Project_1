@@ -1,7 +1,7 @@
 public class Department {
     private String departmentId;
     private String departmentName;
-    private static int nextId = 1;
+    public static int nextId = Assignment.nextId;
 
 
     public Department(String departmentId, String departmentName) {
